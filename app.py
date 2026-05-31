@@ -278,16 +278,16 @@ with col_right:
     # 11 Daftar Kategori Lengkap Versi Panjang Sesuai Request Terbaru Lu
     GLOBAL_GENRES = [
         "Academic Support and Resources", 
-        "Student Affairs", 
-        "International student experiences", 
-        "Health and Well-being Support", 
-        "Facilities and Infrastructure",
-        "Financial Services",
-        "Admissions and Enrollment",
-        "Career Services",
-        "Information Technology Support",
-        "Food and Dining Services",
-        "Housing and Residential Life"
+        "Athletics and sports", 
+        "Online learnings", 
+        "Food and Cantines", 
+        "Financial Support",
+        "Health and Well-being Support",
+        "Housing and Transportation",
+        "International student experiences",
+        "Internship Opportunities",
+        "Student Affairs",
+        "Student Activities"
     ]
     
     # Dropdown Filter dengan Nama Panjang
@@ -345,16 +345,16 @@ if st.session_state.complaints:
     
     color_map = {
         "Academic Support and Resources": "#0e639c", 
-        "Student Affairs": "#34d399", 
-        "International student experiences": "#c586c0", 
-        "Health and Well-being Support": "#f87171", 
-        "Facilities and Infrastructure": "#4ec9b0",
-        "Financial Services": "#ce9178",
-        "Admissions and Enrollment": "#60a5fa",
-        "Career Services": "#fbbf24",
-        "Information Technology Support": "#fb7185",
-        "Food and Dining Services": "#a78bfa",
-        "Housing and Residential Life": "#22d3ee"
+        "Athletics and sports": "#34d399", 
+        "Online learnings": "#c586c0", 
+        "Food and Cantines": "#4ec9b0",
+        "Financial Support": "#ce9178",
+        "Health and Well-being Support": "#60a5fa",
+        "Housing and Transportation": "#fbbf24",
+        "International student experiences": "#fb7185",
+        "Internship Opportunities": "#a78bfa",
+        "Student Affairs": "#22d3ee",
+        "Student Activities": "#f87171"
     }
     
     fig = px.pie(

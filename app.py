@@ -12,7 +12,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag
 
 # --- LOGIC ASLI LU (TIDAK DIUBAH SAMA SEKALI) ---
-for resource in ['punkt', 'stopwords', 'wordnet', 'averaged_perceptron_tagger']:
+for resource in ['punkt','punk_tab', 'stopwords', 'wordnet', 'averaged_perceptron_tagger']:
     nltk.download(resource, quiet=True)
 
 lemmatizer = WordNetLemmatizer()

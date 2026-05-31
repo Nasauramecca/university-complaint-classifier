@@ -275,13 +275,22 @@ with col_left:
 with col_right:
     st.markdown("### 📋 Global Records (All Engines)", unsafe_allow_html=True)
     
-    # 11 Daftar Kategori Versi Pendek (Sesuai Request Lu)
+    # 11 Daftar Kategori Lengkap Versi Panjang Sesuai Request Terbaru Lu
     GLOBAL_GENRES = [
-        "Academic", "Facilities", "Financial", "Administration", 
-        "Library", "Student Affairs", "IT Support", "Security", 
-        "Canteen", "Parking", "Laboratory"
+        "Academic Support and Resources", 
+        "Student Affairs", 
+        "International student experiences", 
+        "Health and Well-being Support", 
+        "Facilities and Infrastructure",
+        "Financial Services",
+        "Admissions and Enrollment",
+        "Career Services",
+        "Information Technology Support",
+        "Food and Dining Services",
+        "Housing and Residential Life"
     ]
     
+    # Dropdown Filter dengan Nama Panjang
     selected_genre = st.selectbox("Filter by genre:", ["All"] + GLOBAL_GENRES)
     st.write("")
     
@@ -335,10 +344,17 @@ if st.session_state.complaints:
     genre_counts.columns = ['Genre', 'Count']
     
     color_map = {
-        "Academic": "#0e639c", "Facilities": "#4ec9b0", "Financial": "#ce9178", 
-        "Administration": "#c586c0", "Library": "#60a5fa", "Student Affairs": "#34d399",
-        "IT Support": "#fbbf24", "Security": "#f87171", "Canteen": "#a78bfa", 
-        "Parking": "#fb7185", "Laboratory": "#22d3ee"
+        "Academic Support and Resources": "#0e639c", 
+        "Student Affairs": "#34d399", 
+        "International student experiences": "#c586c0", 
+        "Health and Well-being Support": "#f87171", 
+        "Facilities and Infrastructure": "#4ec9b0",
+        "Financial Services": "#ce9178",
+        "Admissions and Enrollment": "#60a5fa",
+        "Career Services": "#fbbf24",
+        "Information Technology Support": "#fb7185",
+        "Food and Dining Services": "#a78bfa",
+        "Housing and Residential Life": "#22d3ee"
     }
     
     fig = px.pie(

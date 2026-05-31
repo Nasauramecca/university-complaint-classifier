@@ -11,7 +11,30 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag
 
+import os
+import streamlit as st
+import nltk
 
+# --- TRICK KHUSUS DEPLOYMENT NLTK CLOUD ---
+# 1. Tentukan path folder nltk_data di server Streamlit
+nltk_data_path = os.path.join(os.path.expanduser("~"), "nltk_data")
+
+# 2. Bikin foldernya kalau belum ada di server
+if not os.path.exists(nltk_data_path):
+    os.makedirs(nltk_data_path)
+
+# 3. Masukkan path tersebut ke dalam list pencarian NLTK
+if nltk_data_path not in nltk.data.path:
+    nltk.data.path.append(nltk_data_path)
+
+# 4. Paksa download resource satu per satu langsung ke folder tersebut
+REQUIRED_RESOURCES = ['punkt', 'punkt_tab', 'stopwords', 'wordnet', 'averaged_perceptron_tagger']
+for resource in REQUIRED_RESOURCES:
+    try:
+        nltk.download(resource, download_dir=nltk_data_path, quiet=True)
+    except Exception as e:
+        st.error(f"Gagal download NLTK resource {resource}: {e}")
+# ------------------------------------------
 
 lemmatizer = WordNetLemmatizer()
 

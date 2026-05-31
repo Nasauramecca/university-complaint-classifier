@@ -28,7 +28,7 @@ if nltk_data_path not in nltk.data.path:
     nltk.data.path.append(nltk_data_path)
 
 # 4. Paksa download resource satu per satu langsung ke folder tersebut
-REQUIRED_RESOURCES = ['punkt', 'punkt_tab', 'stopwords', 'wordnet', 'averaged_perceptron_tagger']
+REQUIRED_RESOURCES = ['punkt', 'punkt_tab', 'stopwords', 'wordnet', 'averaged_perceptron_tagger', 'averaged_perceptron_tagger_eng']
 for resource in REQUIRED_RESOURCES:
     try:
         nltk.download(resource, download_dir=nltk_data_path, quiet=True)

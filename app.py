@@ -19,9 +19,8 @@ import nltk
 # 1. Tentukan path folder nltk_data di server Streamlit
 nltk_data_path = os.path.join(os.path.expanduser("~"), "nltk_data")
 
-# 2. Bikin foldernya kalau belum ada di server
-if not os.path.exists(nltk_data_path):
-    os.makedirs(nltk_data_path)
+# 2. Bikin foldernya (INI YANG DIGANTI)
+os.makedirs(nltk_data_path, exist_ok=True)  # <--- INI YANG BARU
 
 # 3. Masukkan path tersebut ke dalam list pencarian NLTK
 if nltk_data_path not in nltk.data.path:
